@@ -96,8 +96,12 @@
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="lib\" />
+    <Content Include="lib\Selenium.WebDriverBackedSelenium.dll" />
+    <Content Include="lib\ThoughtWorks.Selenium.Core.dll" />
+    <Content Include="lib\WebDriver.dll" />
+    <Content Include="lib\WebDriver.Support.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
