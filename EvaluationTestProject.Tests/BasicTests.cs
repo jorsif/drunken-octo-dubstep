@@ -42,6 +42,12 @@ namespace EvaluationTestProject.Tests
             Assert.AreEqual(100, results[0].BlogId);
         }
 
+
+        [Test]
+        public void Success()
+        {
+            Assert.True(true);
+        }
         //[Test]
         //public void AutoFail()
         //{
