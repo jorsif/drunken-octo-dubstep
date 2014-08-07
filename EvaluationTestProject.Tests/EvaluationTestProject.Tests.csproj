@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <Import Project=".\lib\JustMock.targets" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -81,6 +82,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="lib\JustMock.targets" />
     <None Include="packages.config" />
     <None Include="Specs.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
@@ -111,4 +113,10 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+  <Target Name="BeforeTestConfiguration">
+	<JustMockStart />
+  </Target>
+  <Target Name="AfterTestConfiguration">
+	<JustMockStop />
+  </Target>
 </Project>
