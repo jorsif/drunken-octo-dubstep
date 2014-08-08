@@ -81,7 +81,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="lib\JustMock.targets" />
     <None Include="packages.config" />
     <None Include="Specs.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

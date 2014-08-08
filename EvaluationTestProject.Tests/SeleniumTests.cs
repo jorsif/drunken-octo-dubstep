@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using NUnit.Framework;
 using NUnit.Framework.Constraints;
+using System.Threading;
 
 using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
@@ -18,6 +19,8 @@ namespace EvaluationTestProject.Tests
         {
             IWebDriver driver = new FirefoxDriver();
             
+            //Thread.Sleep(10000);
+
             driver.Navigate().GoToUrl("http://localhost:60211");
             
             string link = driver.FindElement(By.CssSelector("[href*='/Home/Failure']")).Text;
