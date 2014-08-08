@@ -8,6 +8,7 @@ using System.Threading;
 
 using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
+using OpenQA.Selenium.Support.UI;
 
 namespace EvaluationTestProject.Tests
 {
@@ -18,12 +19,12 @@ namespace EvaluationTestProject.Tests
         public void PageRenders()
         {
             IWebDriver driver = new FirefoxDriver();
-            
-            //Thread.Sleep(10000);
+            driver.Url = "http://localhost:60211";
 
-            driver.Navigate().GoToUrl("http://localhost:60211");
+            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
+            IWebElement element = wait.Until<IWebElement>((d => { return d.FindElement(By.CssSelector("[href*='/Home/Failure']")); }));
             
-            string link = driver.FindElement(By.CssSelector("[href*='/Home/Failure']")).Text;
+            string link = element.Text;
 
             driver.Dispose();
 
