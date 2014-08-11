@@ -3,10 +3,7 @@ using System.Linq;
 using System.Collections.Generic;   
 using TechTalk.SpecFlow;
 using Telerik.JustMock;
-using NUnit.Framework.Constraints;
 using NUnit.Framework;
-using System.Data.Entity;
-
 using EvaluationTestProject.DAL;
 using EvaluationTestProject.Models;
 

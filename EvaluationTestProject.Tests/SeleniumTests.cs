@@ -1,16 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using NUnit.Framework;
-using NUnit.Framework.Constraints;
-using System.Threading;
-
-using OpenQA.Selenium;
-using OpenQA.Selenium.Firefox;
-using OpenQA.Selenium.Support.UI;
-
-namespace EvaluationTestProject.Tests
+﻿namespace EvaluationTestProject.Tests
 {
     //[TestFixture]
     //class SeleniumTests

@@ -1,11 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using EvaluationTestProject.DAL;
 using EvaluationTestProject.Models;
-
-using NUnit.Framework.Constraints;
 using NUnit.Framework;
 
 using Telerik.JustMock;
